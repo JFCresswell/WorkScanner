@@ -1,0 +1,15 @@
+var express = require('express');
+
+
+var routes = function(Auth){
+    var authenticationRouter = express.Router();
+
+    var authenticationController = require('../controllers/authenticationController')(Auth)
+    authenticationRouter.route('/')
+        .post(authenticationController.post)
+        .get(authenticationController.get);
+
+    return authenticationRouter;
+};
+
+module.exports = routes;
