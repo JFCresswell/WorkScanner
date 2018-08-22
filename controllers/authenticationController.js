@@ -8,7 +8,7 @@ var authenticationController = function(){
 
     var get = function(req,res){
 
-        res.status(200).send('just a placeholder');
+        res.status(200).send({'result': 'retrieved authentication parms'});
      }
 
     return {

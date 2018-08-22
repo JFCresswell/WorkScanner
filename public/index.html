@@ -16,11 +16,47 @@
     <label>Password</label>
     <input type="text"></input>
     <br />
- 
-   <button onclick="OnAuthenticateClick()">Authenticate</button>
+    <label>Get Results</label>
+    <textarea id="getResults"></textarea>
+    <br />
+    <button onclick="OnAuthenticateClick()">Authenticate</button>
 
   </body>
 
-  <script src="authentication.js"></script>
+  <script src="http://localhost:3000/authentication.js"></script>
+  <!-- <script>
+        function OnAuthenticateClick(){
+         document.getElementById('getResults').innerHTML =
+              'Call pending...';
+   
+        const http = new XMLHttpRequest();
+        const url='http://localhost:3000/api/authentication';
+        http.open("GET", url);
+        http.send();
+      
+        http.onreadystatechange = function() {
+          var result = document.getElementById("getResults");
+           result.innerText = http.responseText.length > 0 
+                              ? http.responseText : result.innerText;
+        }
+      //      var result = document.getElementById("getResults");
+      //      result.innerText = http.responseText.length > 0 
+      //                         ? http.responseText : result.innerText;
+      //   document.getElementById('getResults').innerHTML =
+      //        'Call finished';
+          
+      //}
+
+      // fetch(url)
+      // .then(function(response) {
+      //     return response.json();
+      // })
+      // .then(function(myJson) {
+      //     document.getElementById('getResults').innerHTML =
+      //         JSON.stringify(myJson);
+      // });
+
+    }
+  </script> -->
 
 </html>
