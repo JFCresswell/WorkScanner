@@ -8,18 +8,69 @@
   </head>
   <body>
     <h1>
-      Web scanning placeholder page...
+      Web scanning authentication placeholder page...
     </h1>
+    <br/>
+
+    <p>
+    <h3>
+      Standard password based approach
+    </h3>
+
+    <br />
+
     <label>User ID</label>
     <input id="uid" type="text"></input>
     <br />
     <label>Password</label>
     <input id="pwd" type="text"></input>
     <br />
-    <label>Post Results</label>
-    <textarea id="postResults"></textarea>
+    <button onclick="OnAuthenticatePasswordClick()">Generate token from password</button>
+
+    </p>
+
     <br />
-    <button onclick="OnAuthenticateClick()">Authenticate</button>
+    <br />
+
+    <p>
+    <h3>
+      SPC client based approach
+    </h3>  
+
+      <label>Unique client ID (MAC address probably)</label>
+      <input id="clientid" type="text"></input>
+   
+      <br />
+
+      <label>SPC UI client name</label>
+      <input id="clientname" type="text"></input>
+
+      <br />
+
+      <label>SPC target server name</label>
+      <input id="servername" type="text"></input>
+
+      <br />
+      
+      <button onclick="OnAuthenticateClientIDClick()">Generate token from client info</button>
+    </p>
+
+    <br />
+    <br />
+
+    <p>
+    <label>Token</label>
+    <input id="token" type="text"></input>
+
+    </br>
+    <button onclick="OnVerifyTokenClick()">Test token</button>
+    </p>
+    <br />
+    <p>
+    <label>Post Results</label>
+    <textarea rows=5 cols=80 id="postResults"></textarea>
+    </p>
+    <br />
 
   </body>
 
